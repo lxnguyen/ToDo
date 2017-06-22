@@ -1,2 +1,2 @@
 # ToDo Application
-A ToDo Web Application using React
+A ToDo app using React, Redux, and Firebase Edit
