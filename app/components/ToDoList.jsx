@@ -10,7 +10,7 @@ const ToDoList = React.createClass({
 					// Need a unique prop
 					// Pass every attribute on an object
 					// as a prop w/o explicating defining everything
-					<ToDo key={todo.id} {...todo}/>
+					<ToDo key={todo.id} {...todo} onToggle={this.props.onToggle}/>
 				);
 			});
 		}

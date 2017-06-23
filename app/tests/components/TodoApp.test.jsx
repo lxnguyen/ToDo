@@ -11,7 +11,7 @@ describe('ToDoApp', () => {
 		expect(ToDoApp).toExist();
 	});
   	
-  	it('should add todo onAddToDo hand;e', () => {
+  	it('should add todo onAddToDo handle', () => {
   		const todoText = '';
   		const todoApp = TestUtils.renderIntoDocument(<ToDoApp/>);
   		
@@ -21,4 +21,19 @@ describe('ToDoApp', () => {
   		expect(todoApp.state.todos[0].text).toBe(todoText);
   	});
   
+  	it('should handleToggle when called', () => {
+  		const todoData = {
+  			id: 11,
+  			text: 'testing',
+  			completed: false
+  		};
+  		const todoApp = TestUtils.renderIntoDocument(<ToDoApp/>);
+  		
+  		todoApp.setState({todos: [todoData]});
+  		
+  		expect(todoApp.state.todos[0].completed).toBe(false);
+  		todoApp.handleToggle(11);
+  		expect(todoApp.state.todos[0].completed).toBe(true);
+  		
+  	});
 });
