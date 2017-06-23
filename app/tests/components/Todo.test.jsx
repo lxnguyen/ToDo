@@ -12,7 +12,7 @@ describe('ToDo', () => {
 	});
 
 	it('props called successfully when someone clicks the item', () => {
-		let todoData= {
+		const todoData= {
 			id: 2,
 			text: 'testing todos',
 			completed: false,
