@@ -52,4 +52,27 @@ describe('ToDoAPI', () => {
 			expect(actualTodos).toEqual(todos);
 		})
 	});
+	describe('Filter Todos', () => {
+		const todos = [{
+			id: 1,
+			text: 'test all files',
+			completed: true
+		},{
+			id: 2,
+			text: 'test all files',
+			completed: false
+		}, {
+			id: 3,
+			text: 'test all files',
+			completed: true
+		}];
+		it('should return all items if showCompleted is true', () => {
+			const filteredTodos = ToDoAPI.filterTodos(todos, true, '');
+			expect(filteredTodos.length).toBe(3);
+		})
+		it('should return all items if showCompleted is false', () => {
+			const filteredTodos = ToDoAPI.filterTodos(todos, false, '');
+			expect(filteredTodos.length).toBe(1);
+		})
+	});
 });
