@@ -29,4 +29,12 @@ describe('ToDoList', () => {
   	// Expects the length of our objects in todo's are equal to our dummy data
   	expect(todosComponents.length).toBe(todos.length);
   })
+  
+    it('should render todo message with no todos', () => {
+    	const todos = [];
+	  	const todoList = TestUtils.renderIntoDocument(<ToDoList todos={todos}/>);
+	  	const $el = $(ReactDOM.findDOMNode(todoList));
+	  	
+	  	expect($el.find('.container__message').length).toBe(1);
+	})
 });

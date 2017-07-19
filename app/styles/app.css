@@ -1,3 +1,9 @@
+@import 'components/container.css';
+@import 'components/controls.css';
+@import 'components/navigation.css';
+@import 'components/page-title.css';
+@import 'components/todo_app.css';
+
 .main-app{
 	margin: 0 auto;
 	width: 100%;

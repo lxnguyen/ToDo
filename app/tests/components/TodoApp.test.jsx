@@ -19,8 +19,7 @@ describe('ToDoApp', () => {
   		todoApp.handleAddToDo(todoText);
   		
   		expect(todoApp.state.todos[0].text).toBe(todoText);
-  		// Expect createAt to be a number
-  		expect(todoApp.state.todos[0].createdAt).toBeA('number');
+    		expect(todoApp.state.todos[0].createdAt).toBeA('number');
   	});
   
   	it('should handleToggle when called', () => {
@@ -38,7 +37,6 @@ describe('ToDoApp', () => {
   		expect(todoApp.state.todos[0].completed).toBe(false);
   		todoApp.handleToggle(11);
   		expect(todoApp.state.todos[0].completed).toBe(true);
-  		// Expect completedAT to be a number
   		expect(todoApp.state.todos[0].completeddAt).toBeA('number');
   	});
 	
@@ -57,7 +55,6 @@ describe('ToDoApp', () => {
   		expect(todoApp.state.todos[0].completed).toBe(true);
   		todoApp.handleToggle(11);
   		expect(todoApp.state.todos[0].completed).toBe(false);
-  		// Write a function where completed is false
   		expect(todoApp.state.todos[0].completeddAt).toBe(undefined);
   	});
 	

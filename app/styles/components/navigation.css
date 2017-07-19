@@ -1,0 +1,18 @@
+.top-bar, .top-bar ul {
+  background-color: grey;
+}
+
+.top-bar {
+  .menu-text {
+    color: white;
+  }
+
+  .menu > .menu-text > a {
+    display: inline;
+    padding: 0;
+  }
+
+  .active-link {
+    font-weight: bold;
+  }
+}

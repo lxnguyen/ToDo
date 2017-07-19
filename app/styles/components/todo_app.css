@@ -1,0 +1,31 @@
+.todo {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	transition: background .3s ease;
+}
+
+.todo p,
+.todo input {
+	margin: 0 0 0 10px;
+}
+
+.todo:first-child {
+	margin-right: 1 rem;
+}
+
+.todo:hover {
+	background: #f0f0f0;
+}
+
+
+.todo__subtext {
+	color: #999;
+}
+
+.todo-completed p,
+.todo-completed .todo-subtext{
+	color: #999;
+	text-decoration: line-through;
+}
