@@ -12,7 +12,7 @@ export let searchTextReducer = (state = '', action) => {
 
 export let showCompletedReducer = (state = false, action) => {
 	switch (action.type) {
-		case 'SET_COMPLETED':
+		case 'TOGGLE_SHOW_COMPLETED':
 			return !state;
 	 	default:
 			return state;
@@ -32,7 +32,7 @@ export let todosReducer = (state = [], action) => {
   					completeddAt : undefined
 				}
 			]
-		case 'TOOGLE_TODO' :
+		case 'TOGGLE_TODO' :
 			return state.map((todo) => {
 				if (todo.id === action.id) {
 					let nextCompleted = !todo.completed;

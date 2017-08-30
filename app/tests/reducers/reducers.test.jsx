@@ -19,7 +19,7 @@ describe('Reducers', () => {
 	describe('showCompleteReducer', () => {
 		it('should show complete', () => {
 			let action = {
-				type: 'SET_COMPLETED'
+				type: 'TOGGLE_SHOW_COMPLETED'
 			};
 			
 			let res = reducers.showCompletedReducer(df(false), df(action));
@@ -48,7 +48,7 @@ describe('Reducers', () => {
 				completeddAt : 125
 			}];
 			let action = {
-				type: 'TOOGLE_TODO',
+				type: 'TOGGLE_TODO',
 				id: '123'
 			};
 			let res = reducers.todosReducer(df(todos), df(action));
